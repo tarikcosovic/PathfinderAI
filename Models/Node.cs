@@ -12,6 +12,7 @@ namespace PathfinderAI
         public bool isVisited { get; set; }
         private Dictionary<Node, double> _neighbors { get; set; }
         internal Node prev { get; set; }
+        internal double ShortestDistanceFromStart { get; set; }
 
         public Node()
         {
@@ -19,6 +20,7 @@ namespace PathfinderAI
             isVisited = false;
             _neighbors = new Dictionary<Node, double>();
             prev = null;
+            ShortestDistanceFromStart = int.MaxValue;
         }
 
 
@@ -95,6 +97,7 @@ namespace PathfinderAI
         {
             this.isVisited = false;
             this.prev = null;
+            this.ShortestDistanceFromStart = int.MaxValue;
         }
     }
 }

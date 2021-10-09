@@ -14,7 +14,7 @@ namespace PathfinderAI.HelperClasses
         {
             if (!File.Exists(logsFileName))
                 File.Create(logsFileName);
-
+            
             if(Logger == null)
             {
                 Logger = new LoggerConfiguration()

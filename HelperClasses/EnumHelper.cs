@@ -8,6 +8,6 @@ namespace PathfinderAI.PathfindingAlgorithms
 {
     public static class EnumHelper
     {
-        public enum Algorithms { BreadthFirstSearch, DepthFirstSearch, Prim, Kruskal, Djikstra, AStar };
+        public enum Algorithms { BreadthFirstSearch, DepthFirstSearch, Prim, Kruskal, Dijkstra, AStar };
     }
 }

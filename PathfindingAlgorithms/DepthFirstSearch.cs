@@ -15,7 +15,7 @@ namespace PathfinderAI.PathfindingAlgorithms
 
             return HasPathDfs(start, target);
         }
-        public Path<T> GetShortestPath(T start, T target)
+        public Path<T> GetShortestPath(T start, T target, List<T> graph = null)
         {
             path = new Path<T>();
             start.isVisited = true;

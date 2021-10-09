@@ -15,6 +15,7 @@ namespace PathfinderAI
             {
                 case EnumHelper.Algorithms.BreadthFirstSearch:  return new BreadthFirstSearch<T>();
                 case EnumHelper.Algorithms.DepthFirstSearch:    return new DepthFirstSearch<T>();
+                case EnumHelper.Algorithms.Dijkstra:            return new Dijkstra<T>();
 
                 default:                                        return new BreadthFirstSearch<T>();
             }

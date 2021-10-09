@@ -5,8 +5,6 @@ using PathfinderAI.PathfindingAlgorithms;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 
 namespace PathfinderAI
 {
@@ -130,7 +128,7 @@ namespace PathfinderAI
             {
                 var service = AlgorithmFactory<T>.GetAlgorithm(algorithm);
 
-                path = service.GetShortestPath(start, target);
+                path = service.GetShortestPath(start, target, _vertices);
             }
             catch (Exception ex)
             {

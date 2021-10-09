@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PathfinderAI.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Jil, Version=2.17.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Jil.2.17.0\lib\net45\Jil.dll</HintPath>
@@ -65,6 +68,7 @@
     <Compile Include="HelperClasses\EnumHelper.cs" />
     <Compile Include="PathfindingAlgorithms\BreadthFirstSearch.cs" />
     <Compile Include="PathfindingAlgorithms\DepthFirstSearch.cs" />
+    <Compile Include="PathfindingAlgorithms\Dijkstra.cs" />
     <Compile Include="PathfindingAlgorithms\IPathfindingAlgorithm.cs" />
     <Compile Include="Models\Path.cs" />
     <Compile Include="Program.cs" />

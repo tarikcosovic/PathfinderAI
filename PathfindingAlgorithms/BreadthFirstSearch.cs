@@ -30,7 +30,7 @@ namespace PathfinderAI.PathfindingAlgorithms
             throw new NotImplementedException("Using Breadth-first Search to find all possible paths is not supported.");
         }
 
-        public Path<T> GetShortestPath(T start, T target)
+        public Path<T> GetShortestPath(T start, T target, List<T> graph = null)
         {
             queue.Clear();
             queue.Enqueue(start);
