@@ -24,15 +24,6 @@ namespace PathfinderAI
         static void Main(string[] args)
         {
             InitializeGraph();
-        }
-
-        static void InitializeGraph()
-        {
-            Graph = new Graph<Airport>();
-
-            string graphDataPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "GraphData.json");
-
-            Graph.ReadFromJson(graphDataPath);
 
             var sarajevo = Graph.GetNode(x => x.City == "Sarajevo");
             var belgrade = Graph.GetNode(x => x.City == "Belgrade");
@@ -42,15 +33,32 @@ namespace PathfinderAI
             sarajevo.AddNeighborReverse(belgrade, 23).AddNeighbor(zagreb, 25);
             zagreb.AddNeighbor(rome, 44);
 
+            // Get All Paths Unit Test 01
+
+            //var paths = Graph.GetAllPaths(belgrade, rome, EnumHelper.Algorithms.Dijkstra);
+
+            //foreach (var path in paths)
+            //    Console.WriteLine(path.ToString(x => x.City));
+
+
+
+            // Get Shortest Path Unit Test 01
+
             var path = Graph.GetShortestPath(belgrade, rome, EnumHelper.Algorithms.Dijkstra);
 
-            foreach(var node in path.Nodes)
-                Console.Write(node.City + " - ");
+            Console.WriteLine(path.ToString(x => x.City));
 
-            Console.WriteLine("Total Distance: " + path.TotalWeight);
 
             Console.ReadKey();
         }
 
+        private static void InitializeGraph()
+        {
+            Graph = new Graph<Airport>();
+
+            string graphDataPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "GraphData.json");
+
+            Graph.ReadFromJson(graphDataPath);
+        }
     }
 }

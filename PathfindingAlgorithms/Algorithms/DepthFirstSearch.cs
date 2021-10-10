@@ -9,23 +9,32 @@ namespace PathfinderAI.PathfindingAlgorithms
     public class DepthFirstSearch<T> : IPathfindingAlgorithm<T> where T : Node
     {
         private Path<T> path = null;
-        public bool HasPath(T start, T target)
+
+        public bool HasPath(T start, T target, List<T> graph = null)
         {
-            start.isVisited = true;
+            InitializeVariables(start);
 
             return HasPathDfs(start, target);
         }
+
         public Path<T> GetShortestPath(T start, T target, List<T> graph = null)
         {
-            path = new Path<T>();
-            start.isVisited = true;
 
             return GetShortestPathBfs(start, target) ? path : null;
         }
 
-        public List<Path<T>> GetAllPaths(T start, T target)
+        public List<Path<T>> GetAllPaths(T start, T target, List<T> graph = null)
         {
             throw new NotImplementedException("Using Depth-first Search to find all possible paths is not supported.");
+        }
+
+
+        #region HelperMethods
+
+        private void InitializeVariables(T start)
+        {
+            path = new Path<T>();
+            start.isVisited = true;
         }
 
         private bool HasPathDfs(T start, T target)
@@ -76,5 +85,7 @@ namespace PathfinderAI.PathfindingAlgorithms
             }
             return false;
         }
+
+        #endregion
     }
 }

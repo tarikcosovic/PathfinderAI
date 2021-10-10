@@ -66,11 +66,13 @@
     <Compile Include="Models\Graph.cs" />
     <Compile Include="Models\Node.cs" />
     <Compile Include="HelperClasses\EnumHelper.cs" />
-    <Compile Include="PathfindingAlgorithms\BreadthFirstSearch.cs" />
-    <Compile Include="PathfindingAlgorithms\DepthFirstSearch.cs" />
-    <Compile Include="PathfindingAlgorithms\Dijkstra.cs" />
+    <Compile Include="PathfindingAlgorithms\Algorithms\BreadthFirstSearch.cs" />
+    <Compile Include="PathfindingAlgorithms\Algorithms\DepthFirstSearch.cs" />
+    <Compile Include="PathfindingAlgorithms\Algorithms\Dijkstra.cs" />
     <Compile Include="PathfindingAlgorithms\IPathfindingAlgorithm.cs" />
     <Compile Include="Models\Path.cs" />
+    <Compile Include="PathfindingAlgorithms\Algorithms\Kruskal.cs" />
+    <Compile Include="PathfindingAlgorithms\Algorithms\Prim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

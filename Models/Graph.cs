@@ -105,7 +105,7 @@ namespace PathfinderAI
             {
                 var service = AlgorithmFactory<T>.GetAlgorithm(algorithm);
 
-                hasPath = service.HasPath(start, target);
+                hasPath = service.HasPath(start, target, _vertices);
             }
             catch(Exception ex)
             {
@@ -151,7 +151,7 @@ namespace PathfinderAI
             {
                 var service = AlgorithmFactory<T>.GetAlgorithm(algorithm);
 
-                path = service.GetAllPaths(start, target);
+                path = service.GetAllPaths(start, target, _vertices);
             }
             catch (Exception ex)
             {

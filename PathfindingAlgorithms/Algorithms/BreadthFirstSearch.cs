@@ -10,11 +10,9 @@ namespace PathfinderAI.PathfindingAlgorithms
     {
         internal Queue<T> queue = new Queue<T>();
 
-        public bool HasPath(T start, T target)
+        public bool HasPath(T start, T target, List<T> graph = null)
         {
-            queue.Clear();
-            queue.Enqueue(start);
-            start.isVisited = true;
+            InitializeVariables(start);
 
             while (queue.Count > 0)
             {
@@ -24,42 +22,36 @@ namespace PathfinderAI.PathfindingAlgorithms
 
             return false;
         }
-
-        public List<Path<T>> GetAllPaths(T start, T target)
-        {
-            throw new NotImplementedException("Using Breadth-first Search to find all possible paths is not supported.");
-        }
-
+        
         public Path<T> GetShortestPath(T start, T target, List<T> graph = null)
         {
-            queue.Clear();
-            queue.Enqueue(start);
-            start.isVisited = true;
+            InitializeVariables(start);
 
             while (queue.Count > 0)
             {
                 var result = GetShortestPathBfs(queue.Dequeue(), target);
 
-                //Get path nodes via improvised linked list
                 if (result != null)
-                {
-                    var path = new Path<T>();
-
-                    while (result != null)
-                    {
-                        path.Nodes.Add(result);
-
-                        result = (T)result.prev;
-                    }
-
-                    return path;
-                }
+                    return GetPathResult(result);
             }
 
             return null;
         }
 
+        public List<Path<T>> GetAllPaths(T start, T target, List<T> graph = null)
+        {
+            throw new NotImplementedException("Using Breadth-first Search to find all possible paths is not supported.");
+        }
 
+
+        #region HelperMethods
+
+        private void InitializeVariables(T start)
+        {
+            queue.Clear();
+            queue.Enqueue(start);
+            start.isVisited = true;
+        }
         private bool HasPathBfs(T x, T target)
         {
             if (x.id == target.id)
@@ -79,7 +71,6 @@ namespace PathfinderAI.PathfindingAlgorithms
                 return false;
             }
         }
-
         private T GetShortestPathBfs(T x, T target)
         {
             if (x.id == target.id)
@@ -100,6 +91,21 @@ namespace PathfinderAI.PathfindingAlgorithms
                 return null;
             }
         }
+        private Path<T> GetPathResult(T result)
+        {
+            var path = new Path<T>();
+
+            while (result != null)
+            {
+                path.Nodes.Add(result);
+
+                result = (T)result.prev;
+            }
+
+            return path;
+        }
+
+        #endregion
 
     }
 }
