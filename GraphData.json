@@ -18,5 +18,110 @@
     "Name": "Leonardo da Vinci Airport",
     "City": "Rome",
     "Country": "Italy"
+  },
+  {
+    "Name": "Bern Airport",
+    "City": "Bern",
+    "Country": "Switzerland"
+  },
+  {
+    "Name": "Berlin Global Airport",
+    "City": "Berlin",
+    "Country": "Germany"
+  },
+  {
+    "Name": "Leonardo da Vinci Airport",
+    "City": "Rome",
+    "Country": "Italy"
+  },
+  {
+    "Name": "Eiffel Airport",
+    "City": "Paris",
+    "Country": "France"
+  },
+  {
+    "Name": "London Big Ben Airport",
+    "City": "London",
+    "Country": "United Kingdom"
+  },
+  {
+    "Name": "Madrid Airport",
+    "City": "Madrid",
+    "Country": "Spain"
+  }, 
+  {
+    "Name": "Riga Airport",
+    "City": "Riga",
+    "Country": "Latvia"
+  },
+  {
+    "Name": "Lisbon El-International Airport",
+    "City": "Lisbon",
+    "Country": "Portugal"
+  },
+  {
+    "Name": "Dublin International Airport",
+    "City": "Dublin",
+    "Country": "Ireland"
+  },
+  {
+    "Name": "The Flying Dutchman Airport",
+    "City": "Amsterdam",
+    "Country": "Netherlands"
+  },
+  {
+    "Name": "Vienna Airport",
+    "City": "Vienna",
+    "Country": "Austria"
+  },
+  {
+    "Name": "Ljubljana International Airport",
+    "City": "Ljubljana",
+    "Country": "Slovenia"
+  },
+  {
+    "Name": "The Soyuz Airport",
+    "City": "Moscow",
+    "Country": "Russia"
+  },
+  {
+    "Name": "Ukraine Airport",
+    "City": "Kiev",
+    "Country": "Ukraine"
+  },
+  {
+    "Name": "Warsaw Airport",
+    "City": "Warsaw",
+    "Country": "Poland"
+  },
+  {
+    "Name": "Bucharest International",
+    "City": "Bucharest",
+    "Country": "Romania"
+  },
+  {
+    "Name": "Mount Olymp Airport",
+    "City": "Athens",
+    "Country": "Greece"
+  },
+  {
+    "Name": "Hungary International Airport",
+    "City": "Budapest",
+    "Country": "Hungary"
+  },
+  {
+    "Name": "Oslo The North Airport",
+    "City": "Oslo",
+    "Country": "Norway"
+  },
+  {
+    "Name": "Lissabon International",
+    "City": "Lissabon",
+    "Country": "Portugal"
+  },
+  {
+    "Name": "Oslo The North Airport",
+    "City": "Oslo",
+    "Country": "Norway"
   }
 ]
