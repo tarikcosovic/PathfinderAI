@@ -1,5 +1,4 @@
 ﻿using Jil;
-using PathfinderAI.HelperClasses;
 using PathfinderAI.Interfaces;
 using PathfinderAI.PathfindingAlgorithms;
 using System;
@@ -15,8 +14,6 @@ namespace PathfinderAI
         public Graph()
         {
             _vertices = new List<T>();
-
-            LoggingHelper.InitializeLogger();
         }
 
   
@@ -79,10 +76,7 @@ namespace PathfinderAI
             {
                 if (!File.Exists(path))
                 {
-                    LoggingHelper.Logger.Error("Error while reading graph data from external file.");
-                    LoggingHelper.Logger.Error("File does not exist at path: " + path);
-
-                    throw new ArgumentException("File does not exist at provided path: " + path);
+                    throw new FileNotFoundException(path);
                 }
 
                 if(typeof(T) != null)
@@ -91,8 +85,17 @@ namespace PathfinderAI
             }
             catch (Exception ex)
             {
-                LoggingHelper.Logger.Error("Desearlizing from json file failed with message: " + ex.Message);
+                throw new Exception("Unhandled exception while reading from json file with message: " + ex.Message);
             }
+        }
+
+        public Graph<T> LoadDefaultData()
+        {
+            string graphDataPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "GraphData.json");
+
+            this.ReadFromJson(graphDataPath);
+
+            return this;
         }
 
 
@@ -109,7 +112,7 @@ namespace PathfinderAI
             }
             catch(Exception ex)
             {
-                LoggingHelper.Logger.Error(ex.Message);
+                throw new Exception("Exception on HasPath method with message: " + ex);
             }
             finally
             {
@@ -132,7 +135,7 @@ namespace PathfinderAI
             }
             catch (Exception ex)
             {
-                LoggingHelper.Logger.Error(ex.Message);
+                throw new Exception("Unhandled exception with message:" + ex.Message);
             }
             finally
             {
@@ -155,7 +158,7 @@ namespace PathfinderAI
             }
             catch (Exception ex)
             {
-                LoggingHelper.Logger.Error(ex.Message);
+                throw new Exception("Unhandled exception with message:" + ex.Message);
             }
             finally
             {
