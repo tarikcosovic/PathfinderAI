@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>PathfinderAI</id>
+    <version>1.0.0</version>
+    <title>PathfinderAI</title>
+    <authors>tarikcosovic</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/tarikcosovic/PathfinderAI</projectUrl>
+    <iconUrl></iconUrl>
+    <description>PathfinderAI is a C# library with a programmatic approach to graph operations.</description>
+    <releaseNotes>Initial release of the PathfinderAI library.</releaseNotes>
+    <copyright>Copyright © 2021</copyright>
+    <tags>graph graphs node nodes programmatic programmaticNodes programmaticGraph GraphCore NodeCore tarikcosovic pathfinding pathfinder ai artificialintelligence pathfindingAI pathAI shortestPath</tags>
+  </metadata>
+</package>

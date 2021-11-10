@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PathfinderAI")]
-[assembly: AssemblyDescription("PathfinderAI is a C# library with a programmatic approach to graph operations")]
+[assembly: AssemblyDescription("PathfinderAI is a C# library with a programmatic approach to graph operations.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tarik Ćosović")]
 [assembly: AssemblyProduct("PathfinderAI")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright © 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
