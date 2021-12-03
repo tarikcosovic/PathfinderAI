@@ -4,7 +4,15 @@ PathfinderAI is a C# library with a programmatic approach to graph-based operati
 
 ## Installation
 
-Download and reference the solution or dll in your project.
+The supported platforms are .NET/.NET Core, .NET Framework 4.8+.
+
+``` C# 
+$ dotnet add package PathfinderAI
+```
+## Dependencies
+
+* The library uses [Jil](https://www.nuget.org/packages/Jil/3.0.0-alpha2) for Serialization/Deserialization
+* The library uses [Jil](https://www.nuget.org/packages/Serilog/2.11.0-dev-01371) for Logging
 
 
 ## Usage
