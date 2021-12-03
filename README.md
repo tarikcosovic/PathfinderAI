@@ -22,7 +22,7 @@ class Main
         {
             var Graph = new Graph<Airport>();
 
-            string graphDataPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "GraphData.json");
+            string graphDataPath = "Path/GraphData.json";
             Graph.ReadFromJson(graphDataPath);
 
             var sarajevo = Graph.GetNode(x => x.City == "Sarajevo");
