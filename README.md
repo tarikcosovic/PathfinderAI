@@ -23,27 +23,24 @@ In this example we are creating a graph of airports.
 3. Find desired nodes through lambda expressions and connect them with others via method chaining.
 4. Use the built-in pathfinding algorithms to traverse the graph.
 
-```python
-class Main
+```c#
+public void InitializeGraph()
 {
-        public void InitializeGraph()
-        {
-            var Graph = new Graph<Airport>();
+    var Graph = new Graph<Airport>();
 
-            string graphDataPath = "Path/GraphData.json";
-            Graph.ReadFromJson(graphDataPath);
+    string graphDataPath = "Path/GraphData.json";
+    Graph.ReadFromJson(graphDataPath);
 
-            var sarajevo = Graph.GetNode(x => x.City == "Sarajevo");
-            var belgrade = Graph.GetNode(x => x.City == "Belgrade");
-            var zagreb = Graph.GetNode(x => x.City == "Zagreb");
-            var rome = Graph.GetNode(x => x.City == "Rome");
+    var sarajevo = Graph.GetNode(x => x.City == "Sarajevo");
+    var belgrade = Graph.GetNode(x => x.City == "Belgrade");
+    var zagreb = Graph.GetNode(x => x.City == "Zagreb");
+    var rome = Graph.GetNode(x => x.City == "Rome");
 
-            zagreb.AddNeighbor(rome, 44);
-            sarajevo.AddNeighbor(zagreb, 25).AddNeighborReverse(belgrade, 23);
+    zagreb.AddNeighbor(rome, 44);
+    sarajevo.AddNeighbor(zagreb, 25).AddNeighborReverse(belgrade, 23);
 
-            var path = Graph.GetShortestPath(belgrade, rome, EnumHelper.Algorithms.DepthFirstSearch);
+    var path = Graph.GetShortestPath(belgrade, rome, EnumHelper.Algorithms.DepthFirstSearch);
 
-        }
 }
 ```
 
